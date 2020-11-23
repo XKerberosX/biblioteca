@@ -10,7 +10,7 @@ const ContenedorLibros = () => {
     .collection('Libros')
     .get()
     .then((querySnapshot) => {
-      const data = querySnapshot.docs.map((doc) => doc.data());
+      const data = querySnapshot.docs.map((doc) => {return{id:doc.id,...doc.data()}});
       console.log(data);
       setLibros(data);
     });
@@ -24,7 +24,7 @@ const ContenedorLibros = () => {
           <Crear EsLink={true} />
         </React.Fragment>
       )}
-      <Libro  libros={Libros}/>
+      <Libro  libros={Libros} setLibros={setLibros}/>
     </div>
   );
 };

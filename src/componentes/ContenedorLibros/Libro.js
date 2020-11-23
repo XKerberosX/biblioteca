@@ -4,11 +4,12 @@ import Eliminar from "../Botones/Eliminar";
 
 const Libro = (props) => {
   const libros = props.libros;
+  const setLibros = props.setLibros
   return (
     <>
-      {libros.map((libro, index) => {
+      {libros.map((libro) => {
         return (
-          <div key={index}>
+          <div key={libro.id}>
             <div className="ListaLibros">
               <div className="ListaImagen"> </div>
               <div className="ListaDescripcion">
@@ -26,7 +27,7 @@ const Libro = (props) => {
                 </div>
               </div>
               <div className="ListaBotones">
-              <Editar /><Eliminar />
+              <Editar /><Eliminar id={libro.id} libros={libros} setLibros={setLibros} />
             </div>
             </div>
 
