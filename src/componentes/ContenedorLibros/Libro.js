@@ -27,7 +27,7 @@ const Libro = (props) => {
                 </div>
               </div>
               <div className="ListaBotones">
-              <Editar /><Eliminar id={libro.id} libros={libros} setLibros={setLibros} />
+              <Editar libro={libro}  /><Eliminar id={libro.id} libros={libros} setLibros={setLibros} />
             </div>
             </div>
 
