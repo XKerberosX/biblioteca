@@ -13,7 +13,7 @@ const Crear = (props) => {
         </Link>
       ) : (
         <button className='BtnCrear'>
-          <IconoCrear /> <span>Crear Libro</span>
+          <IconoCrear /> <span>Guardar</span>
         </button>
       )}
     </>

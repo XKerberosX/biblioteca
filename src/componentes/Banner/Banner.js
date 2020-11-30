@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import Libro from "../../img/Libros.png"
 
+
 const Banner = () => {
   return (
     <div className="contenedorBN">

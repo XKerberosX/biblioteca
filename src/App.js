@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState} from 'react';
 import { projectFirestore } from './firebase/config';
 
 import Navbar from './componentes/Navbar/navbar';

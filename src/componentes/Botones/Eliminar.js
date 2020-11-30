@@ -2,7 +2,6 @@ import React from 'react'
 import "./style.css";
 import {projectFirestore} from "../../firebase/config"
 import {ReactComponent as IconoEliminar} from "../../img/Eliminar.svg"
-import Libro from '../ContenedorLibros/Libro';
 const Eliminar = (props) => {
     const id = props.id;
     const setLibros = props.setLibros;
