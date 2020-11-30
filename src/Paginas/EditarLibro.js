@@ -3,9 +3,9 @@ import { projectFirestore } from '../firebase/config';
 import './style.css';
 import Crear from '../componentes/Botones/Crear';
 
-const EditarLibro = (props) => {
+const EditarLibro = ({ libro, libros, setLibros, setLibro }) => {
+  console.log('EDITAR LIBRO RENDER');
   // PROPS
-  const libro = props.libro;
   const id = libro.id;
   const Titulo = libro.Titulo;
   const Autor = libro.Autor;
@@ -17,6 +17,16 @@ const EditarLibro = (props) => {
   const [editorial, setEditorial] = useState(Editorial);
   const [clasificacion, setClasificacion] = useState(Clasificacion);
 
+  const librosEditados = () => {
+    const librosEditados = libros.map((lib) => {
+      if (lib.id !== libro.id) {
+        return lib;
+      } else {
+        return { id, titulo, autor, editorial, clasificacion };
+      }
+    });
+    return librosEditados;
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     projectFirestore.collection('Libros').doc(id).update({
@@ -25,6 +35,11 @@ const EditarLibro = (props) => {
       Editorial: editorial,
       Clasificacion: clasificacion,
     });
+    const listarLibros = librosEditados();
+    console.log('Listar libros');
+    console.log(listarLibros);
+    setLibros(listarLibros);
+
     alert('Libro Editado con Exito');
   };
   const handleChange = (e) => {

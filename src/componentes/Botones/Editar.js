@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as IconoEditar } from '../../img/Editar.svg';
 
 const Editar = ({ libro, setLibro }) => {
-  setLibro(libro);
+  const handleClick = () => {
+    setLibro(libro);
+  };
   return (
-    <div style={{ marginBottom: '2em' }}>
+    <div style={{ marginBottom: '2em' }} onClick={handleClick}>
       <Link to='/Editar_libro' className='BtnCrear'>
         <IconoEditar /> <span>Editar Libro</span>
       </Link>

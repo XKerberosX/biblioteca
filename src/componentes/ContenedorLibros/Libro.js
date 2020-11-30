@@ -6,6 +6,7 @@ const Libro = (props) => {
   const libros = props.libros;
   const setLibros = props.setLibros;
   const setLibro = props.setLibro;
+
   return (
     <>
       {libros.map((libro) => {
