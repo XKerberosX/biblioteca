@@ -2,13 +2,12 @@ import  firebase from "firebase/app";
 import "firebase/firestore";
 
 var firebaseConfig = {
-  apiKey: "AIzaSyA6vTroYN_wK5Cu5p8uvb-64LGH4T4XhyQ",
-  authDomain: "biblioteca-4f042.firebaseapp.com",
-  databaseURL: "https://biblioteca-4f042.firebaseio.com",
-  projectId: "biblioteca-4f042",
-  storageBucket: "biblioteca-4f042.appspot.com",
-  messagingSenderId: "226936820185",
-  appId: "1:226936820185:web:afa4cfc7ef08ada874c9c8"
+  apiKey: "AIzaSyDc9oiDDgjmWTP4GgQcF-biD_6NWu1EHPk",
+  authDomain: "biblioteca-4db4b.firebaseapp.com",
+  projectId: "biblioteca-4db4b",
+  storageBucket: "biblioteca-4db4b.appspot.com",
+  messagingSenderId: "572538555109",
+  appId: "1:572538555109:web:323ca9783f84bad462e20c"
 };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
