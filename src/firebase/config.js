@@ -8,7 +8,7 @@ var firebaseConfig = {
   projectId: "biblioteca-4f042",
   storageBucket: "biblioteca-4f042.appspot.com",
   messagingSenderId: "226936820185",
-  appId: "1:226936820185:web:94290252e2f9e7c374c9c8"
+  appId: "1:226936820185:web:7eeaad6040517d3a74c9c8"
 };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
